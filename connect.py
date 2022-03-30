@@ -52,15 +52,11 @@ def consultaCliente():
     print("Mostrando os autores cadastrados")
     
     for linha in dados:
-        texto2 = f'''
+        conteudo = f'''
         Id: {linha[0]}
         Nome: { linha[1]}
         CPF: {linha[2]}
         Senha: {linha[3]}
         '''
         
-        print(texto2)
-    
-    return texto2
-    
-consultaCliente()
+        print(conteudo)
