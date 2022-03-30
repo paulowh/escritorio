@@ -10,6 +10,10 @@ Estou criando um sistema para facilitar o meu serviço atual, onde consulto muit
         ~~~~ 
         pip3 install mysql-connector-python
         ~~~~
+    * Tkinter
+        ~~~~ 
+        pip3 install tkinter
+        ~~~~
 * xampp
 
 ## sistema
