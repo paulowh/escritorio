@@ -42,21 +42,39 @@ def atualizarCliente(nome, cpf, senha, idCliente):
         cursor = con.cursor()
         cursor.execute(sql)
         con.commit()
-def consultaCliente():
-    sql = 'SELECT * FROM `clientes`'
-    cursor = con.cursor()
-    cursor.execute(sql)
-    
-    dados = cursor.fetchall()
-    print(cursor.rowcount)
-    print("Mostrando os autores cadastrados")
-    
-    for linha in dados:
-        conteudo = f'''
-        Id: {linha[0]}
-        Nome: { linha[1]}
-        CPF: {linha[2]}
-        Senha: {linha[3]}
-        '''
+
+def consultaCliente(idCliente):
+    if con.is_connected():
+        sql = 'SELECT * FROM `clientes` WHERE `id` = "{}"'. format(idCliente)
+        cursor = con.cursor()
+        cursor.execute(sql)
         
-        print(conteudo)
+        dados = cursor.fetchall()
+        #print(cursor.rowcount)
+        #print("Mostrando os autores cadastrados")
+        
+        for linha in dados:
+            conteudo = f'''
+            Id: {linha[0]}
+            Nome: { linha[1]}
+            CPF: {linha[2]}
+            Senha: {linha[3]}
+            '''
+        return conteudo
+
+def ConsultaListaClientes():
+    if con.is_connected():
+        sql = 'SELECT id, nome FROM `clientes`'
+        cursor = con.cursor()
+        cursor.execute(sql)
+        conteudo = ''
+        dados = cursor.fetchall()
+        #print(cursor.rowcount)
+        #print("Mostrando os autores cadastrados")
+        
+        for linha in dados:
+            conteudo += 'Id: {:<3} | {}\n'.format(linha[0], str(linha[1]).upper())
+        #print(conteudo)
+        return conteudo
+
+ConsultaListaClientes()
