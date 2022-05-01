@@ -45,7 +45,7 @@ def atualizarCliente(nome, cpf, senha, idCliente):
 
 def consultaCliente(idCliente):
     if con.is_connected():
-        sql = 'SELECT * FROM `clientes` WHERE `id` = "{}"'. format(idCliente)
+        sql = 'SELECT * FROM `clientes` WHERE `nome` = "{}"'. format(idCliente)
         cursor = con.cursor()
         cursor.execute(sql)
         
@@ -77,4 +77,4 @@ def ConsultaListaClientes():
         #print(conteudo)
         return conteudo
 
-ConsultaListaClientes()
+TesteConexao()

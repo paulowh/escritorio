@@ -54,8 +54,8 @@ def menu():
     #CONSULTAR CLIENTE
     elif num == 2:
         print(connect.ConsultaListaClientes())
-        num = int(input('digite o ID do cliente a ser consultado: '))
-        print(connect.consultaCliente(num))
+        #num = int(input('digite o ID do cliente a ser consultado: '))
+        #print(connect.consultaCliente(num))
 
 
     #DELETAR CLIENTE

@@ -1,2 +1,3 @@
 CREATE TABLE `bd`.`clientes` ( `id` INT NOT NULL AUTO_INCREMENT , `nome` VARCHAR(100) NOT NULL , `cpf` VARCHAR(11) NOT NULL , `senha` VARCHAR(100) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 INSERT INTO `clientes` (`id`, `nome`, `cpf`, `senha`) VALUES (NULL, 'Paulo Henrique dos Santos', 'coloca seu CPF', 'Senha do Portal');
+CREATE TABLE `bd`.`agenda` ( `id` INT NOT NULL AUTO_INCREMENT , `cliente_id` INT NOT NULL , `data` DATE NOT NULL , `hora` TIME NOT NULL , `local` VARCHAR(100) NOT NULL , `presencial` INT NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
