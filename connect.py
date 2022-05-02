@@ -1,9 +1,16 @@
-from cgitb import text
+from distutils.log import debug
+from turtle import pos
 import mysql.connector as mysql
 from mysql.connector import Error
+from flask import Flask, render_template
 
+app = Flask(__name__)
 #Dados base da conexão
 con = mysql.connect(host = 'localhost', database = 'bd', user = 'root', password = '')
+
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 def TesteConexao():
     #teste de conexão
@@ -62,6 +69,7 @@ def consultaCliente(idCliente):
             '''
         return conteudo
 
+@app.route("/consutaClientes", methods = ["post"])
 def ConsultaListaClientes():
     if con.is_connected():
         sql = 'SELECT id, nome FROM `clientes`'
@@ -73,8 +81,9 @@ def ConsultaListaClientes():
         #print("Mostrando os autores cadastrados")
         
         for linha in dados:
-            conteudo += 'Id: {:<3} | {}\n'.format(linha[0], str(linha[1]).upper())
+            conteudo += 'Id: {:<3} | {}\n '.format(linha[0], str(linha[1]).upper())
         #print(conteudo)
-        return conteudo
+        return render_template("index.html", msg=conteudo) 
+app.run(debug=True)
 
 TesteConexao()
