@@ -6,7 +6,7 @@ class Usuario{
     public $senha;
 
     public function listar(){
-        $conexao = new PDO("mysql:host=127.0.0.1;dbname=escola","root","");
+        $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
         
         $query = "SELECT id, usuario, senha FROM tb_usuarios";
         $resultado = $conexao->query($query);
@@ -15,7 +15,7 @@ class Usuario{
     }
 
     public function inserir($usuario, $senha){
-        $conexao = new PDO("mysql:host=127.0.0.1;dbname=escola","root","");
+        $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
         
         $query="INSERT INTO tb_usuarios(usuario, senha) VALUES ('".$usuario."', '".$senha."')";
 
@@ -25,7 +25,7 @@ class Usuario{
     }
 
     public function validarLogin($usuario, $senha){
-        $conexao = new PDO("mysql:host=127.0.0.1;dbname=escola","root","");
+        $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
 
         $query = "SELECT * FROM tb_professores WHERE usuario = '".$usuario."' AND senha = '".$senha."'";
 
