@@ -1,0 +1,12 @@
+.table th+.acao {
+    width: 50px;
+}
+
+.navbar-inverse{
+
+    background-color: lightskyblue;
+}
+
+.navbar-inverse a{
+    color: black !important;
+}
