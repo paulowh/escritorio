@@ -7,16 +7,24 @@ namespace Composer\Autoload;
 class ComposerStaticInit65f42c4c29c7eb897725c760be0f9b35
 {
     public static $prefixLengthsPsr4 = array (
-        'W' => 
+        'M' => 
         array (
-            'Wef\\Calendar\\' => 13,
+            'Models\\' => 7,
+        ),
+        'C' => 
+        array (
+            'Classes\\' => 8,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Wef\\Calendar\\' => 
+        'Models\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/../../model',
+        ),
+        'Classes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/../../class',
         ),
     );
 

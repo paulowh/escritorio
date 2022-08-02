@@ -2,7 +2,8 @@
 namespace Classes;
 
 class ClassTeste{
-    public function __construct(){
+    public function __construct()
+    {
         echo "Tudo funcionando ok";
     }
 }

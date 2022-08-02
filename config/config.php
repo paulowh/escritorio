@@ -1,19 +1,15 @@
 <?php
-
-#caminhos absolutos
+#Caminhos absolutos
 $dirInt="escritorio/";
-define('DIRPAGE', "http://{$_SERVER['HTTP_HOST']}/{$dirInt}");
-
+define('DIRPAGE',"http://{$_SERVER['HTTP_HOST']}/{$dirInt}");
 $bar=(substr($_SERVER['DOCUMENT_ROOT'],-1)=='/')?"":"/";
-define('DIRREQ', "{$_SERVER['DOCUMENT_ROOT']}{$bar}{$dirInt}");
+define('DIRREQ',"{$_SERVER['DOCUMENT_ROOT']}{$bar}{$dirInt}");
 
-echo DIRPAGE.'<br>'.DIRREQ;
+#Banco de Dados
+define('HOST','localhost');
+define('DB','sistema');
+define('USER','root');
+define('PASS','');
 
-#Banco de dados
-define('HOST', 'localhost');
-define('DB', 'sistema');
-define('USER', 'root');
-define('PASS', '');
-
-#Incluir Arquivo
+#Incluir arquivos
 include(DIRREQ.'lib/composer/vendor/autoload.php');

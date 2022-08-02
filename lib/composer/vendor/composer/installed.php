@@ -3,7 +3,7 @@
         'name' => 'wef/calendar',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '2592272b23426bf5d389be5993effa7ef8ffdb35',
+        'reference' => '31568d6f73a9848d0bba86a37869f79012e9d233',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'wef/calendar' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2592272b23426bf5d389be5993effa7ef8ffdb35',
+            'reference' => '31568d6f73a9848d0bba86a37869f79012e9d233',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

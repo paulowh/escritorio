@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <div class="calendar"></div>
 
     <script src="<?php echo DIRPAGE . 'lib/js/FullCalendar/main.js'; ?>"></script>
