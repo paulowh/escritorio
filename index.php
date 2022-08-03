@@ -16,6 +16,11 @@
 
     <div class="calendar"></div>
 
+    <?php 
+    $obj=new Models\ModelConect();
+    var_dump($obj->conectDB());
+    ?>
+
     <script src="<?php echo DIRPAGE . 'lib/js/FullCalendar/main.js'; ?>"></script>
     <script src="<?php echo DIRPAGE . 'lib/js/javascript.js'; ?>"></script>
 

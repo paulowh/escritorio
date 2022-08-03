@@ -1,0 +1,3 @@
+CREATE TABLE `sistema`.`events` ( `id` INT NOT NULL , `title` VARCHAR(90) NOT NULL , `description` TEXT NOT NULL , `color` VARCHAR(10) NOT NULL , `start` TIMESTAMP NOT NULL , `end` TIMESTAMP NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+
+INSERT INTO `events` (`id`, `title`, `description`, `color`, `start`, `end`) VALUES ('1', 'Reunião', 'essa reunião é muito importante', 'red', '2022-08-03 21:11:37', '2022-08-04 21:11:37'), ('2', 'buscar o Jorginho', 'não esqueça de buscar o Jorginho de novo', 'blue', '2022-08-05 21:11:37', '2022-08-06 21:11:37');
