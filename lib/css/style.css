@@ -6,7 +6,7 @@
     
 }
 
-.calendar{
+.calendarManager, .calendarUser{
     width: 80%;
     margin: 30px auto;
     height: 80vh;
